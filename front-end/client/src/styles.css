@@ -1,0 +1,25 @@
+/* You can add global styles to this file, and also import other style files */
+
+/*Generales*/
+
+#phrasalverbsCard{
+    width:80%;
+    margin: auto;
+    width: 50%;
+    border: 3px solid green;
+    padding: 10px;
+}
+
+.carousel-item{
+    height: 500px;
+    background: #425367;
+}
+
+.carousel-item h2{
+    font-size: 80px;
+}
+
+.carousel-item p{
+    font-size: 20px;
+}
+

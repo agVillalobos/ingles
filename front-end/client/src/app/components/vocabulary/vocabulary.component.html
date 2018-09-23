@@ -1,0 +1,61 @@
+<div id="phrasalverbsCard">
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
+        </ol>
+        <div *ngIf="vocabularies" class="carousel-inner">
+            <div *ngFor="let vocabulary of vocabularies" class="carousel-item" [ngClass]="{
+                'active':vocabularies[0] == vocabulary
+              }">
+                <div class="carousel-caption d-none d-md-block">
+                    <h2>{{vocabulary.Name}}</h2>
+                    <p>Example:
+                        <span>{{vocabulary.Examples}}</span>
+                    </p>
+                    <p>Synonyms:
+                        <span>{{vocabulary.Synonyms}}</span>
+                    </p>
+                    <p>Translate:
+                        <span>{{vocabulary.Translate}}</span>
+                    </p>
+                    <p>Type:
+                        <span>{{vocabulary.Type}}</span>
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+
+    </div>
+    <!-- <button type="button" class="btn btn-lg btn-danger" data-toggle="popover" title="Popover title" data-content="">Meaning</button> -->
+    <button type="button" (click)="updateVocabularies()" [ngClass]="{
+        'btn btn-success':type == '', 'btn btn-secondary':type != ''
+      }">Update all</button>
+    <button type="button" (click)="updateVocabularies('PV')" [ngClass]="{
+        'btn btn-success':type == 'PV', 'btn btn-secondary':type != 'PV'
+      }">Get Phrasal Verbs</button>
+    <button type="button" (click)="updateVocabularies('N')" [ngClass]="{
+        'btn btn-success':type == 'N', 'btn btn-secondary':type != 'N'
+      }">Get Nouns</button>
+    <button type="button" (click)="updateVocabularies('V')" [ngClass]="{
+        'btn btn-success':type == 'V', 'btn btn-secondary':type != 'V'
+      }">Get Verbs</button>
+    <button type="button" (click)="updateVocabularies('Adj')" [ngClass]="{
+        'btn btn-success':type == 'Adj', 'btn btn-secondary':type != 'Adj'
+      }">Get Adjectives</button>
+</div>

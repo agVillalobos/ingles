@@ -1,0 +1,44 @@
+<div id="phrasalverbsCard">
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
+        </ol>
+        <div *ngIf="phrasalVerbs" class="carousel-inner">
+            <div *ngFor="let phrasalVerb of phrasalVerbs" class="carousel-item" [ngClass]="{
+            'active':phrasalVerbs[0] == phrasalVerb
+          }">
+                <div class="carousel-caption d-none d-md-block">
+                    <h2>{{phrasalVerb.Name}}</h2>
+                    <p>Example:
+                        <span>{{phrasalVerb.Examples}}</span>
+                    </p>
+                    <p>Synonyms:
+                        <span>{{phrasalVerb.Synonyms}}</span>
+                    </p>
+                    <p>Translate:
+                            <span>{{phrasalVerb.Translate}}</span>
+                        </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+
+    </div>
+    <!-- <button type="button" class="btn btn-lg btn-danger" data-toggle="popover" title="Popover title" data-content="">Meaning</button> -->
+    <button type="button" class="btn btn-success" (click)="updatePhraslVerbs()">Actualizar</button>
+</div>
