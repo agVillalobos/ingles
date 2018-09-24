@@ -32,7 +32,7 @@ namespace FileToMongo
             //Guarda el valor en Mongo.
             var dbName = "English";
             var mongo = new MongoDBExample(dbName);
-            mongo.Insert<Vocabulary>("vocabulary", valuesToInsert);
+            mongo.Insert<Vocabulary>("vocabularies", valuesToInsert);
 
 
             Console.ReadKey();

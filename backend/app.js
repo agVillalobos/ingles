@@ -10,6 +10,8 @@ var phrasalVerbsRouter = require('./routes/phrasalVerbs');
 var vocabularyRouter = require('./routes/vocabulary');
 
 //middlewares
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
 
 //cors
 app.use((req, res, next) => {

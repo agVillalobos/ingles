@@ -12,9 +12,21 @@
           <span class="sr-only">(current)</span>
         </a>
       </li>
-      <li class="nav-item">
+      <!-- <li class="nav-item">
         <a class="nav-link" href="#">Vocabulary</a>
-      </li>
+      </li> -->
+
+      <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+            aria-expanded="false">
+            Vocabulary
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a [routerLink]="['/vocabulary']" class="dropdown-item" >See vocabulary</a>
+            <a [routerLink]="['/add-vocabulary']" class="dropdown-item">Add new vocabulary</a>
+          </div>
+        </li>
+
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
           aria-expanded="false">
@@ -36,8 +48,6 @@
       <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
     </form>
   </div>
-
-
 </nav>
 
-<vocabulary></vocabulary>
+<router-outlet></router-outlet>

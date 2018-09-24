@@ -12,18 +12,18 @@
                 'active':vocabularies[0] == vocabulary
               }">
                 <div class="carousel-caption d-none d-md-block">
-                    <h2>{{vocabulary.Name}}</h2>
+                    <h2>{{vocabulary.name}}</h2>
                     <p>Example:
-                        <span>{{vocabulary.Examples}}</span>
+                        <span>{{vocabulary.examples}}</span>
                     </p>
                     <p>Synonyms:
-                        <span>{{vocabulary.Synonyms}}</span>
+                        <span>{{vocabulary.synonyms}}</span>
                     </p>
                     <p>Translate:
-                        <span>{{vocabulary.Translate}}</span>
+                        <span>{{vocabulary.translate}}</span>
                     </p>
                     <p>Type:
-                        <span>{{vocabulary.Type}}</span>
+                        <span>{{vocabulary.type}}</span>
                     </p>
 
                 </div>
@@ -59,3 +59,5 @@
         'btn btn-success':type == 'Adj', 'btn btn-secondary':type != 'Adj'
       }">Get Adjectives</button>
 </div>
+
+<button type="button" class="btn btn-primary">Agregar vocabulary</button>

@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, OnInit, DoCheck } from '@angular/core';
+import { Router, ActivatedRoute, Params } from '@angular/router';
+import { GLOBAL } from './services/global';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +9,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Ingles';
+
+  constructor(private _route: ActivatedRoute,
+    private _router: Router) {
+
+  }
 }

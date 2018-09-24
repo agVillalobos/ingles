@@ -1,24 +1,30 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import {FormsModule} from '@angular/forms';
+import {HttpClientModule} from '@angular/common/http';
+import {routing, appRoutingProviders} from './app.routing';
 
-import {HttpClientModule} from '@angular/common/http'
 //Componentes
 import { AppComponent } from './app.component';
-import { PhrasalVerbComponent } from './components/phrasalverbs/phrasalverbs.component';
 import { VocabularyComponent } from './components/vocabulary/vocabulary.component';
+import { AddVocabularyComponent } from './components/add-vocabulary/add-vocabulary.component';
+import { HomeComponent } from './components/home/home.component';
 
 
 @NgModule({
   declarations: [
-    AppComponent, 
-    PhrasalVerbComponent,
-    VocabularyComponent
+    AppComponent,
+    VocabularyComponent,
+    AddVocabularyComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
-    HttpClientModule
+    HttpClientModule,
+    routing,
+    FormsModule
   ],
-  providers: [],
+  providers: [appRoutingProviders],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

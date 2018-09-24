@@ -28,4 +28,11 @@ export class VocabularyService {
         return this._http.get(this.url + method, { headers: headers });
     }
 
+    addVocabulary(vocabulary) : Observable<any>{
+        let params = JSON.stringify(vocabulary);
+        let headers = new HttpHeaders().set('Content-Type', 'application/json');
+
+        return this._http.post(this.url + 'save-vocabulary', params, { headers: headers });
+    }
+
 }

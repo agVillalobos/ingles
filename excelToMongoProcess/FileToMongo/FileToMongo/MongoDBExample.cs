@@ -37,7 +37,7 @@ namespace FileToMongo
                 foreach (var member in members)
                 {
                     var val = v.GetType().GetProperty(member.Name).GetValue(v, null);
-                    valuesToInsert.Add(new BsonElement(member.Name, val.ToString()));
+                    valuesToInsert.Add(new BsonElement(member.Name.ToLower(), val.ToString()));
                 }
 
                 bsondDocument.AddRange(valuesToInsert);
