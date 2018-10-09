@@ -40,7 +40,7 @@ function getCounters(req, res) {
     }
     var finder = {};
     if (type != "")
-        finder = { 'Type': type };
+        finder = { 'type': type };
 
     Vocabulary.find(finder)
         .paginate(page, itemsPerPage, (err, vocabularies, total) => {

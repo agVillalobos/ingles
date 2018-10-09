@@ -57,7 +57,6 @@ export class VocabularyComponent implements OnInit {
     }
 
     updateVocabularies(type = "") {
-        console.log(type);
         this.type = type;
         this.getVocabularies(type);
     }

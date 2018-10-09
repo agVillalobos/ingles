@@ -33,8 +33,8 @@ export class AddVocabularyComponent implements OnInit {
                 console.log(response);
                 if (response && response.vocabulary) {
                     this.status = 'success';
-                    //form.reset();
-                    this._router.navigate(['/vocabulary']);
+                    form.reset();
+                    //this._router.navigate(['/vocabulary']);
                 } else {
                     this.status = 'error';
                 }
